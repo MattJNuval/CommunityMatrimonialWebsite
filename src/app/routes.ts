@@ -14,4 +14,7 @@ export const router = createBrowserRouter([
       { path: "submit", Component: SubmissionForm },
     ],
   },
-]);
+], {
+  // Use relative paths for all navigation
+  basename: '/DevSampleWebsites/',
+});
