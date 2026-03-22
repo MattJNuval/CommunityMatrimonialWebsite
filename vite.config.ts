@@ -37,7 +37,7 @@ export default defineConfig({
   assetsInclude: ['**/*.svg', '**/*.csv'],
   
   // GitHub Pages deployment configuration
-  base: '/DevSampleWebsites/', // Use relative paths for all assets
+  base: getBasePath(),
   build: {
     outDir: 'dist',
     assetsDir: 'assets',

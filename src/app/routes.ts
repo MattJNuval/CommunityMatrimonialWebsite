@@ -3,6 +3,7 @@ import { Root } from "./components/Root";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { SubmissionForm } from "./pages/SubmissionForm";
+import { TroubleshootingDashboard } from "./components/TroubleshootingDashboard";
 
 export const router = createBrowserRouter([
   {
@@ -14,7 +15,8 @@ export const router = createBrowserRouter([
       { path: "submit", Component: SubmissionForm },
     ],
   },
-], {
-  // Use relative paths for all navigation
-  basename: '/DevSampleWebsites/',
-});
+  {
+    path: "/troubleshoot",
+    Component: TroubleshootingDashboard,
+  },
+]);
