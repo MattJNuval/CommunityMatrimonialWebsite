@@ -19,4 +19,8 @@ export const router = createBrowserRouter([
     path: "/troubleshoot",
     Component: TroubleshootingDashboard,
   },
-]);
+], {
+  // Use hash-based routing for GitHub Pages compatibility
+  // This ensures the app works correctly when served from a subdirectory
+  basename: "/DevSampleWebsites/",
+});
