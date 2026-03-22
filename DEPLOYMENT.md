@@ -88,6 +88,20 @@ git push origin main
 
 The GitHub Action will automatically rebuild and redeploy your site!
 
+## Testing the Build Locally
+
+Before pushing to GitHub, you can test the production build locally:
+
+```bash
+# Build with the correct base path (replace 'your-repo-name' with your actual repository name)
+VITE_BASE_PATH=/your-repo-name/ pnpm run build
+
+# Preview the production build
+pnpm run preview
+```
+
+This ensures your build will work correctly on GitHub Pages.
+
 ## Custom Domain (Optional)
 
 If you want to use a custom domain (e.g., www.nepalimatrimony.com):

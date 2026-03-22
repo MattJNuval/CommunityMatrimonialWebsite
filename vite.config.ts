@@ -21,7 +21,8 @@ export default defineConfig({
   assetsInclude: ['**/*.svg', '**/*.csv'],
   
   // GitHub Pages deployment configuration
-  base: '/DevSampleWebsites/',
+  // Use repository name as base for GitHub Pages, or '/' for custom domain/root deployment
+  base: process.env.VITE_BASE_PATH || '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
