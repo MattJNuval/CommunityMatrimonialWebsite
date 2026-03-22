@@ -126,12 +126,14 @@ If the GitHub Action fails:
    - Missing dependencies: Make sure all packages are in `package.json`
    - Build errors: Test locally with `pnpm run build`
 
-### Blank Page After Deployment
+### Blank Page or Module Loading Errors
 
-If you see a blank page:
-1. Check browser console for errors (F12)
-2. Verify the `base` path in `vite.config.ts` matches your repository name
-3. Clear browser cache and hard refresh (Ctrl+Shift+R or Cmd+Shift+R)
+If you see a blank page or errors like "Loading module failed":
+1. Make sure you've pushed the latest changes to GitHub
+2. Check that the GitHub Action completed successfully (Actions tab)
+3. The configuration now automatically detects your repository name
+4. Wait a few minutes and hard refresh (Ctrl+Shift+R or Cmd+Shift+R)
+5. Check browser console for specific errors (F12)
 
 ### 404 on Routes
 
