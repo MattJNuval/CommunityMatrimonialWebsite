@@ -21,6 +21,10 @@ A modern, responsive community matrimonial website for a Nepali cultural organiz
 
 ## Local Development
 
+You can use pnpm, Yarn, or npm to run this project locally. Pick the tool you prefer.
+
+Using pnpm (project default):
+
 1. Install dependencies:
 ```bash
 pnpm install
@@ -35,6 +39,54 @@ pnpm run dev
 ```bash
 pnpm run build
 ```
+
+Using Yarn (recommended for this system):
+
+1. If you don't have Yarn, enable Corepack and activate Yarn (recommended):
+```bash
+corepack enable
+corepack prepare yarn@stable --activate
+```
+
+2. From the project root, install dependencies:
+```bash
+yarn install
+# or simply
+yarn
+```
+
+3. NOTE: `react` and `react-dom` are listed as `peerDependencies` in `package.json` and will NOT be installed automatically. Add them with:
+```bash
+yarn add react@18.3.1 react-dom@18.3.1
+```
+
+4. Start the dev server:
+```bash
+yarn dev
+```
+
+Using npm:
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Add peer deps if needed:
+```bash
+npm install react@18.3.1 react-dom@18.3.1
+```
+
+3. Start development:
+```bash
+npm run dev
+```
+
+Notes and gotchas
+
+- Peer dependencies: `react` and `react-dom` are intentionally declared as peer deps. If you'd prefer `yarn install` (or `npm install`) to be sufficient, move them into `dependencies` in `package.json` and commit the change. I can make that edit for you if you'd like.
+- Yarn versions: Yarn Berry (v2+) uses Plug'n'Play by default. To keep the familiar node_modules layout, either use the above Corepack-activated Yarn (classic behavior) or configure Yarn with `nodeLinker: "node-modules"` in a `.yarnrc.yml` file.
+- The repository includes a `pnpm.overrides` field in `package.json`; Yarn will ignore it (harmless).
 
 ## Deployment to GitHub Pages
 
